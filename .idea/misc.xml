@@ -3,16 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/activity_calendar.xml" value="0.1431159420289855" />
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/activity_event.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/activity_main.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/activity_meditation.xml" value="0.22" />
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/activity_wellness.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/S538333/Documents/GitHub/NWMSU-Wellness/app/src/main/res/layout/fragment_northwest_activities.xml" value="0.6" />
-        <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/activity_meditation.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/activity_wellness.xml" value="0.152" />
-        <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/fragment_northwest_activities.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_calendar.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_event.xml" value="0.264" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/fragment_navigation.xml" value="0.264" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/fragment_northwest_activities.xml" value="0.264" />
       </map>
     </option>
   </component>
