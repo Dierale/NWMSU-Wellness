@@ -4,6 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D2F1F1"
     tools:context=".MeditationActivity">
+
+    <ImageButton
+        android:id="@+id/musicBTN"
+        android:layout_width="92dp"
+        android:layout_height="81dp"
+        android:backgroundTint="#095327"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/stat_sys_headset"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="165dp" />
+
+    <ImageButton
+        android:id="@+id/quotesBTN"
+        android:layout_width="92dp"
+        android:layout_height="81dp"
+        android:backgroundTint="#095327"
+        android:scaleType="centerCrop"
+        app:srcCompat="@android:drawable/ic_menu_recent_history"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="325dp" />
+
+    <ImageButton
+        android:id="@+id/phoneBTN"
+        android:layout_width="92dp"
+        android:layout_height="81dp"
+        android:backgroundTint="#095327"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/stat_sys_phone_call"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <TextView
+        android:id="@+id/mdisplayTV"
+        android:layout_width="102dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        android:text="Relaxing Music"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <TextView
+        android:id="@+id/qdisplayTV"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:text="Motivational Quotes"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624" />
+
+    <TextView
+        android:id="@+id/wdisplayTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wellness Centre "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
