@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NWMSUWellness">
         <activity
+            android:name=".ActivitiesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MeditationActivity"
             android:exported="false" />
         <activity

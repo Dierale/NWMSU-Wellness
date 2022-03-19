@@ -97,7 +97,7 @@ public class NavigationFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent eventsIntent = new Intent(getActivity(), EventActivity.class);
+                    Intent eventsIntent = new Intent(getActivity(), ActivitiesActivity.class);
                     startActivity(eventsIntent);
                 } catch (Exception e) {
                     // Error handling
