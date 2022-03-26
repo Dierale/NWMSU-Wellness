@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 "There's no motivation like impending doom"
         };
         final int maxSize = quotes.length;
-        // ((Max - Min) + 1) + Min // Our min is 0 right now
-        final int random = new Random().nextInt(maxSize+ 1);
+        // ((Max - Min) + 1) + Min // Our min is 0 right now // we take out +1 for indexing
+        final int random = new Random().nextInt(maxSize);
         return "Daily Quote\n-----\n"+quotes[random];
     }
 }
