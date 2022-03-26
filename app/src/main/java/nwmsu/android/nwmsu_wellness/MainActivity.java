@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
         final int maxSize = quotes.length;
         // ((Max - Min) + 1) + Min // Our min is 0 right now
         final int random = new Random().nextInt(maxSize+ 1);
-        return "Daily Quote\n"+quotes[random];
+        return "Daily Quote\n-----\n"+quotes[random];
     }
 }
