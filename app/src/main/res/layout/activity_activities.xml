@@ -11,12 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Event"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCalanderBTN"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintTop_toBottomOf="@+id/addCalanderBTN" />
 
     <Button
         android:id="@+id/addCalanderBTN"
@@ -26,17 +24,28 @@
         android:text="Add to Calander"
         app:layout_constraintBottom_toTopOf="@+id/shareBTN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView" />
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="411dp"
-        android:layout_height="639dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/addCalanderBTN"
+        android:layout_width="396dp"
+        android:layout_height="429dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView3"
+        android:name="nwmsu.android.nwmsu_wellness.NavigationFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
