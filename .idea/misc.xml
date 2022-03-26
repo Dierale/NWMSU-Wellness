@@ -9,6 +9,7 @@
         <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_meditation.xml" value="0.23822463768115942" />
         <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/activity_wellness.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/fragment_calendar_listing.xml" value="0.4" />
         <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/fragment_navigation.xml" value="0.264" />
         <entry key="..\:/Users/S503330/AndroidStudioProjects/NWMSUWellness/app/src/main/res/layout/fragment_northwest_activities.xml" value="0.264" />
         <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/activity_activities.xml" value="0.21693840579710144" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/activity_wellness.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/fragment_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/layout/fragment_northwest_activities.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/s538259/AndroidStudioProjects/NWMSU-Wellness/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>
   </component>
