@@ -7,7 +7,7 @@
     tools:context=".ActivitiesActivity">
 
     <Button
-        android:id="@+id/shareBTN2"
+        android:id="@+id/shareBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Event"
@@ -15,29 +15,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addCalanderBTN"
+        app:layout_constraintVertical_bias="0.94" />
 
     <Button
-        android:id="@+id/addCalanderBTN2"
+        android:id="@+id/addCalanderBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:text="Add to Calander"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/shareBTN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
-    <TextView
-        android:id="@+id/eventsTV2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Events from NWMSU goes here!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="411dp"
+        android:layout_height="639dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/addCalanderBTN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
