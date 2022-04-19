@@ -83,7 +83,7 @@ public class NavigationFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent healthIntent = new Intent(getActivity(), HealthActivity.class);
+                    Intent healthIntent = new Intent(getActivity(), MeditationActivity.class);
                     startActivity(healthIntent);
                 } catch (Exception e) {
                     // Error handling
