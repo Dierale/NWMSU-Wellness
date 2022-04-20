@@ -2,6 +2,8 @@ package nwmsu.android.nwmsu_wellness;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -32,4 +34,6 @@ public class MainActivity extends AppCompatActivity {
         final int random = new Random().nextInt(maxSize);
         return "Daily Quote\n-----\n"+quotes[random];
     }
+
+
 }
