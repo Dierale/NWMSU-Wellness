@@ -26,8 +26,8 @@
         android:id="@+id/quotesBTN"
         android:layout_width="92dp"
         android:layout_height="81dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="440dp"
         android:backgroundTint="#095327"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,18 +61,15 @@
         android:id="@+id/qdisplayTV"
         android:layout_width="295dp"
         android:layout_height="55dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="419dp"
         android:text="New Motivational Quote"
         android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.442" />
 
     <TextView
         android:id="@+id/wdisplayTV"
@@ -102,17 +99,16 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/QuoteTV"
+        android:id="@+id/quoteTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.06"
         tools:text='"Insert motivational quote here\nMay be a scrolling set of quotes"' />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
