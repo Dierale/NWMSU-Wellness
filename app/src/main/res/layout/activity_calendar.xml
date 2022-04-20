@@ -8,6 +8,17 @@
     android:orientation="vertical"
     tools:context=".CalendarActivity">
 
+    <Button
+        android:id="@+id/addEventBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add New Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarRV" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +27,15 @@
         android:layout_marginTop="20dp">
 
         <Button
+            android:id="@+id/prevMonthBTN"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/cal_prev"
             android:background="@null"
-            android:textStyle="bold"
+            android:onClick="backMonthAction"
+            android:text="@string/cal_prev"
             android:textSize="20sp"
-            android:onClick="backMonthAction"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/calendarMainTV"
@@ -36,14 +48,15 @@
             android:text="2022" />
 
         <Button
+            android:id="@+id/nextMonthBTN"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/cal_next"
             android:background="@null"
-            android:textStyle="bold"
+            android:onClick="nextMonthAction"
+            android:text="@string/cal_next"
             android:textSize="20sp"
-            android:onClick="nextMonthAction"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -120,16 +133,4 @@
         android:id="@+id/calendarRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <Button
-        android:id="@+id/addEventBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add New Event"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarRV" />
-
 </LinearLayout>
