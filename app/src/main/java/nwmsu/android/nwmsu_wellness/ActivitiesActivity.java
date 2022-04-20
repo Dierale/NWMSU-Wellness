@@ -38,6 +38,22 @@ public class ActivitiesActivity extends AppCompatActivity {
             }
         });
 
+
+        Button shareBTN = findViewById(R.id.shareBTN);
+        shareBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "http://calendar.nwmissouri.edu/");
+                sendIntent.setType("text/plain");
+
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
+            }
+        });
+
+
     }
 
     @Override
