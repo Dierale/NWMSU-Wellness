@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class MeditationActivity extends AppCompatActivity {
 
@@ -16,17 +20,22 @@ public class MeditationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditation);
-        ((ImageButton) findViewById(R.id.phoneBTN)).setOnClickListener(new View.OnClickListener() {
+
+        TextView motivQuoteTV = findViewById( R.id.QuoteTV);
+        motivQuoteTV.setText( getMotivQuote());
+
+        ImageButton phonebt = (ImageButton) findViewById(R.id.phoneBTN);
+        phonebt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phno = "6605621348";
+                String phno = "tel:6605621348";
                 Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse(phno));
                 startActivity(i);
 
             }
         });
-        ImageButton bt = (ImageButton) findViewById(R.id.musicBTN);
 
+        ImageButton bt = (ImageButton) findViewById(R.id.musicBTN);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,5 +45,20 @@ public class MeditationActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    public String getMotivQuote() {
+        // Should be keeping this inside a string resource
+        String[] quotes = {
+                "Health is wealth",
+                "Do not stop until you are proud",
+                "Believe good things are on the way",
+                "Everyday is a chance to be better",
+
+        };
+        final int maxSize = quotes.length;
+        // ((Max - Min) + 1) + Min // Our min is 0 right now // we take out +1 for indexing
+        final int random = new Random().nextInt(maxSize);
+        return "Motivational Quote\n-----\n"+quotes[random];
     }
 }
