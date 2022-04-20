@@ -39,29 +39,29 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/startDateLBL"
+        android:id="@+id/dateLBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Start Date:"
+        android:text="Date:"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/startDateET"
+        app:layout_constraintTop_toTopOf="@+id/dateET"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/startDateET"
+        android:id="@+id/dateET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="enter start date here"
-        android:inputType="date"
+        android:inputType="time"
         android:minHeight="48dp"
         android:clickable="false"
         android:cursorVisible="false"
@@ -75,13 +75,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/endDateET"
+        android:id="@+id/timeET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="enter end date here"
+        android:hint="Select time here"
         android:inputType="date"
         android:minHeight="48dp"
         android:clickable="false"
@@ -92,22 +92,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/startDateET"
+        app:layout_constraintTop_toBottomOf="@id/dateET"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/endDateLBL"
+        android:id="@+id/timeLBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="End Date:"
+        android:text="Time: "
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/endDateET"
+        app:layout_constraintTop_toTopOf="@id/timeET"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -123,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endDateET"
+        app:layout_constraintTop_toBottomOf="@+id/timeET"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button

@@ -7,11 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -23,6 +27,7 @@ public class CalendarActivity extends AppCompatActivity
     private TextView monthYearTV;
     private RecyclerView calendarRV;
     private static LocalDate selectedDate;
+    private ListView eventListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,7 @@ public class CalendarActivity extends AppCompatActivity
     private void initWidgets() {
         calendarRV = findViewById( R.id.calendarRV);
         monthYearTV = findViewById( R.id.calendarMainTV);
+        eventListView = findViewById( R.id.eventListView);
     }
 
     private void setMonthView() {
@@ -66,6 +72,7 @@ public class CalendarActivity extends AppCompatActivity
         // Now that we have the vars, give them to our RV
         calendarRV.setLayoutManager(layoutManager);
         calendarRV.setAdapter( calendarAdapter);
+        setEventAdapter();
     }
 
     private String getMonthYearFromDate(LocalDate date) {
@@ -121,7 +128,29 @@ public class CalendarActivity extends AppCompatActivity
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        setEventAdapter();
+    }
+
+    public void setEventAdapter() {
+        ArrayList<CalendarEventModel> dailyList = CalendarEventModel.eventsOnDate(CalendarActivity.getSelectedDate());
+        EventAdapter eventAdapter = new EventAdapter(getApplicationContext(), dailyList);
+        eventListView.setAdapter( eventAdapter);
+    }
+
     public static LocalDate getSelectedDate() {
         return selectedDate;
+    }
+
+    public static String formattedDate(LocalDate myDate) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+        return myDate.format(dtf);
+    }
+
+    public static String formattedTime(LocalTime myTime) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("hh:mm:ss a");
+        return myTime.format(dtf);
     }
 }
