@@ -14,3 +14,10 @@ Mindful Bearcats shows the students of NWMSU ways to help deal with problems rel
 1. Reason Adhikari
 2. Alexander Dieringer
 3. Daniel Omole
+
+### Application Requirements:
+* Minimum SDk: 26
+* Preferred emulator/device: Pixel XL API 30
+
+### Application Logo
+![Bearcat](appLogo.PNG)
