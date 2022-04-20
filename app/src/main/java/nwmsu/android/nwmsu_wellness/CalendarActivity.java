@@ -15,13 +15,14 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class CalendarActivity extends AppCompatActivity
         implements  CalendarAdapter.OnItemListener{
 
     private TextView monthYearTV;
     private RecyclerView calendarRV;
-    private LocalDate selectedDate;
+    private static LocalDate selectedDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class CalendarActivity extends AppCompatActivity
 
     private void setMonthView() {
         monthYearTV.setText(getMonthYearFromDate(selectedDate));
-        ArrayList<String> daysForMonth = getDaysForMonthList(selectedDate);
+        ArrayList<LocalDate> daysForMonth = getDaysForMonthList(selectedDate);
 
         // It really wanted me to make sure i converted this to the onItemListener so I did
         CalendarAdapter calendarAdapter = new CalendarAdapter( daysForMonth, (CalendarAdapter.OnItemListener) this);
@@ -72,9 +73,9 @@ public class CalendarActivity extends AppCompatActivity
         return date.format(dtf);
     }
 
-    private ArrayList<String> getDaysForMonthList(LocalDate date) {
+    private ArrayList<LocalDate> getDaysForMonthList(LocalDate date) {
         // Prep results & get yearMonth from given date
-        ArrayList<String> daysForMonth = new ArrayList<>();
+        ArrayList<LocalDate> daysForMonth = new ArrayList<>();
         YearMonth yearMonth = YearMonth.from(date);
 
         // Set up some variables to calculate what day/range we're in
@@ -86,11 +87,12 @@ public class CalendarActivity extends AppCompatActivity
             // if it's before the 1st of the month or after the end of the month
             if( i <= dayOfWeek || i > (daysInMonth + dayOfWeek)) {
                 // add a blank square to the calendar
-                daysForMonth.add("");
+                daysForMonth.add(null);
             } else {
                 // add a properly formatted day
-                String tValue = String.valueOf(i - dayOfWeek);
-                daysForMonth.add(tValue);
+                LocalDate tDate = LocalDate.of(selectedDate.getYear(),
+                        selectedDate.getMonth(), i-dayOfWeek);
+                daysForMonth.add(tDate);
             }
         }
         return daysForMonth;
@@ -109,13 +111,17 @@ public class CalendarActivity extends AppCompatActivity
     }
 
     @Override
-    public void onItemClick( int position, String dayName) {
-        // If we select a non-empty calendar square aka it's a day
-        if( !dayName.equals("")) {
-            // Do stuff
-            String message = "Selected Date " + dayName + " "
-                    + getMonthYearFromDate(selectedDate);
+    public void onItemClick( int position, LocalDate date) {
+        if( date != null) {
+            selectedDate = date;
+            setMonthView();
+
+            String message = "Selected Date :" + date.toString();
             Log.d("Calendar", message);
         }
+    }
+
+    public static LocalDate getSelectedDate() {
+        return selectedDate;
     }
 }
