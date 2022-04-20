@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NWMSU-Wellness</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="cal_next">NEXT</string>
+    <string name="cal_prev">PREV</string>
 </resources>
