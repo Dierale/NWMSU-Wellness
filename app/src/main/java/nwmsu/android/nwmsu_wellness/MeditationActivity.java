@@ -42,7 +42,7 @@ public class MeditationActivity extends AppCompatActivity {
                     //
                     //Intent eventsIntent = new Intent(getApplicationContext(), progMed.class);
                     //startActivity(eventsIntent);
-                    Uri uri = Uri.parse("https://www.youtube.com/watch?v=1ZYbU82GVz4");
+                    Uri uri = Uri.parse("https://www.nwmissouri.edu/wellness/services.htm");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
 
