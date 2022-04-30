@@ -4,4 +4,12 @@
 
     <string name="cal_next">NEXT</string>
     <string name="cal_prev">PREV</string>
+    <string-array name="motivQT">
+        <item>Health is the greatest gift</item>
+        <item>Be the change you wish to see</item>
+        <item>Believe good things are on the way</item>
+        <item>Everyday is a chance to be better</item>
+    </string-array>
+
 </resources>
+

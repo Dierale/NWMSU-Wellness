@@ -5,85 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D2F1F1"
+    android:backgroundTint="#F8FDFD"
     tools:context=".MeditationActivity">
-
-    <ImageButton
-        android:id="@+id/musicBTN"
-        android:layout_width="92dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginBottom="296dp"
-        android:backgroundTint="#095327"
-        android:onClick="dialAction"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/stat_sys_headset" />
-
-    <ImageButton
-        android:id="@+id/quotesBTN"
-        android:layout_width="92dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginBottom="440dp"
-        android:backgroundTint="#095327"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_recent_history" />
-
-    <ImageButton
-        android:id="@+id/phoneBTN"
-        android:layout_width="92dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginBottom="125dp"
-        android:backgroundTint="#095327"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/stat_sys_phone_call" />
-
-    <TextView
-        android:id="@+id/mdisplayTV"
-        android:layout_width="102dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginBottom="220dp"
-        android:text="Relaxing Music"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/qdisplayTV"
-        android:layout_width="295dp"
-        android:layout_height="55dp"
-        android:text="New Motivational Quote"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
-
-    <TextView
-        android:id="@+id/wdisplayTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wellness Centre "
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"
@@ -103,12 +26,72 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quoteTT" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="479dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="132dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/musicBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Relaxing music"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/serviceBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HEALTH PROGRAMS"
+
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/wellnessBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="call wellness center"
+
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quoteTT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="QUOTE FOR YOU"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06"
-        tools:text='"Insert motivational quote here\nMay be a scrolling set of quotes"' />
+        app:layout_constraintVertical_bias="0.105" />
+
+    <Button
+        android:id="@+id/nextBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="No Help"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quoteTV"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
